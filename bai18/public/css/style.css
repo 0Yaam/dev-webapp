@@ -1,0 +1,261 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Tahoma, Arial, sans-serif;
+  background: #efefef;
+  color: #1d2a3a;
+}
+
+.container {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.site-header {
+  padding: 18px 0 0;
+}
+
+.header-panel,
+.content-panel,
+.footer-panel {
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.9);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #89a9d8;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.brand-bag {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #b9d2f2;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.brand-text {
+  letter-spacing: 0.02em;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 18px;
+}
+
+.search-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  width: 100%;
+  height: 34px;
+  border: 1px solid #cfd8e3;
+  border-right: 0;
+  padding: 0 12px;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+}
+
+.search-box button {
+  width: 38px;
+  height: 34px;
+  border: 1px solid #cfd8e3;
+  background: #f8fafc;
+  color: #6b7280;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+}
+
+.header-tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  font-size: 0.92rem;
+}
+
+.header-tools a {
+  color: #74829a;
+  text-decoration: none;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 8px 16px;
+  background: linear-gradient(180deg, #3f6fb9 0%, #2b5ba8 100%);
+  border-top: 1px solid #dbe7ff;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.main-nav a {
+  color: #dce8ff;
+  text-decoration: none;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+}
+
+.page-content {
+  padding: 18px 0;
+}
+
+.content-panel {
+  padding: 28px 32px;
+  text-align: center;
+}
+
+.content-panel h1 {
+  margin: 0;
+  font-family: "Times New Roman", serif;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+}
+
+.content-panel > p {
+  max-width: 760px;
+  margin: 14px auto 0;
+  line-height: 1.7;
+}
+
+.content-grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.content-card {
+  border: 1px solid #dbe2ea;
+  border-radius: 12px;
+  padding: 18px;
+  background: #f8fafc;
+  text-align: left;
+}
+
+.content-card h2 {
+  margin-top: 0;
+  color: #2d5fa9;
+}
+
+.site-footer {
+  padding-bottom: 20px;
+}
+
+.footer-panel {
+  background: linear-gradient(180deg, #4f78b8 0%, #3d68ab 100%);
+  color: #ffffff;
+  padding: 26px 22px 14px;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.1fr;
+  gap: 28px;
+}
+
+.footer-columns h3 {
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 1.35rem;
+}
+
+.footer-columns p,
+.footer-columns li,
+.footer-columns a {
+  color: #e7efff;
+  line-height: 1.75;
+  text-decoration: none;
+}
+
+.footer-columns ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list {
+  margin-bottom: 16px;
+}
+
+.socials {
+  display: flex;
+  gap: 8px;
+}
+
+.socials a {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.footer-bottom {
+  margin-top: 22px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 0.9rem;
+}
+
+code {
+  background: #eef2f7;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+  .topbar,
+  .footer-bottom {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .content-grid,
+  .footer-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    gap: 14px;
+  }
+
+  .brand {
+    justify-content: center;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+
+  .content-panel {
+    padding: 22px 18px;
+  }
+}
