@@ -110,7 +110,7 @@ app.set('view engine', 'hbs');
 
 // khoi dong web server
 
-[4] Tạo các tập tin template, gồm mã HTML và cú pháp của express-handlebars
+[4] Tạo các tập tin template, gồm mã HTML và cú pháp của express-handlebars (sao tôi làm tới bước này, chạy index.js mà nó không có gì xảy ra nhỉ ?, web vẫn không thay đổi như trong ảnh giống thầy)
 
 Bạn mở lại web app ở chế độ các trang tĩnh để quan sát giao diện. Bạn sẽ thấy trang HOME, PRODUCTS, PAGES, CONTACT US đều có phần header và footer giống nhau; chỉ khác nhau phần nội dung giữa trang.
 
