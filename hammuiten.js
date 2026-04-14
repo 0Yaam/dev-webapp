@@ -25,3 +25,13 @@ function Person(){
 }
 
 
+const event = require('events');
+const eventEmitter =new event.EventEmitter();
+eventEmitter.on('hetgio', (ThongBao) =>{
+    console.log(ThongBao);
+});
+
+setTimeout(() => {
+    eventEmitter.emit('hetgio', 'da het gio ròi')
+}, 2000);
+

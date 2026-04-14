@@ -1,30 +1,29 @@
+'use strict'
+const path = require('path');
 const express = require('express');
-const expressHandlebars = require('express-handlebars');
-
 const app = express();
 const port = process.env.PORT || 9000;
+const expressHandlebars = require('express-handlebars');
 
-app.use(express.static(__dirname + '/public'));
-
-app.engine(
-  'hbs',
-  expressHandlebars.engine({
-    layoutsDir: __dirname + '/views/layouts',
-    partialsDir: __dirname + '/views/partials',
-    extname: '.hbs',
-    defaultLayout: 'main',
-  })
-);
+app.engine('hbs', expressHandlebars.engine({
+    layoutsDir: path.join(__dirname, 'views', 'layouts'),
+    partialsDir: path.join(__dirname, 'views', 'partials'),
+    extname: 'hbs',
+    defaultLayout: 'main'
+}));
 
 app.set('view engine', 'hbs');
 
+app.use(express.static(path.join(__dirname, '/public')));
+
 app.get('/', (req, res) => {
-  res.render('index', {
-    title: 'TeoShop',
-    year: new Date().getFullYear(),
-  });
+    res.render('index');
+});
+
+app.get('/:page', (req, res) => {
+    res.render(req.params.page);
 });
 
 app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
+    console.log(`server is running on ${port}`);
 });
